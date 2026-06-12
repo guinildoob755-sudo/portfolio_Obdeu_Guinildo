@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/black-ops-one": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "framer-motion": "^12.40.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

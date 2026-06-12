@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ================================================
+   INDEX.CSS — Site portfolio de Guinildo Obdeu
+   ================================================
+
+   LIBRAIRIES :
+   - React-scroll
+   - Tailwind CSS
+   - Framer Motion
+
+===================================================
+   chractéristiques :
+   - Responsive design
+   - Animations fluides
+   - Navigation intuitive
+
+================================================ */
+
+/* ================================================
+   CHARTE GRAPHIQUE
+
+================================================ */
+
+/* ================================================
+   IMPORTATION DE LA POLICE
+================================================ */
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/assets/fonts/Betania_Patmos_GDL/BetaniaPatmosGDL-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Black Ops One';
+  src: url('./assets/fonts/Black_Ops_One/BlackOpsOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --border: #300a00;
+}
+
+
+/* ================================================
+   STYLES GLOBAUX
+================================================ */
+
+body {
+  background: #120400;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 69%, rgba(128, 35, 21, 1) 88%, rgba(179, 49, 31, 1) 93%, rgba(253, 69, 45, 1) 100%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #1A1A2E; /* ← foncé pour lisibilité sur fond clair */
+}
+
+/* Home */
+.obdeu {
+  background: linear-gradient(90deg, #dd3000 0%, rgb(255, 230, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+h1 { font-family: 'Black Ops One', sans-serif; }
+h2 { font-family: 'Black Ops One', sans-serif; }
+.label { font-family: 'IBM Plex Mono', monospace; font-style: italic; font-size: 0.75rem; letter-spacing: 0.1em; }
+
+.ligne {
+  background-image: 
+    linear-gradient(#FFD700 0px, transparent 1px),
+    linear-gradient(80deg, #FFD700 1px, transparent 1px);
+
+  
+}
+
+/* ================================================
+   CONTENEUR PRINCIPAL
+================================================ */
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+/* ================================================
+   LIENS
+================================================ */
+
+html {
+  scroll-behavior: smooth;
+
+}
