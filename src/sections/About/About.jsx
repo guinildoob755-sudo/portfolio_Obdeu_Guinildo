@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
 
+const skills = [
+  "React", "PHP", "Firebase", "JavaScript", "Figma",
+  "GitHub", "HTML / CSS", "Photoshop", "Electron",
+];
+
 export default function About() {
   return (
-    <section id="About" className="min-h-screen flex items-center justify-center px-8 py-20">
+    <section
+      id="About"
+      className="min-h-screen flex items-center justify-center px-8 py-20 bg-[#0B0B0B]"
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -10,49 +18,61 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-3xl text-center"
       >
-
-        <motion.div className="div text-[#eddd53]">
-          // 01 - ABOUT
+        {/* Label */}
+        <motion.div className="font-mono text-xs tracking-[0.25em] text-[#FF8C00] uppercase mb-3">
+          // 01 — About
         </motion.div>
 
-        <h2 className="text-4xl font-bold text-[#FDBB2D] mb-6 tracking-widest">
-          WHO I AM
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#F5F5F5] mb-14 tracking-tight">
+          Who I am
         </h2>
-        <p className="text-gray-300 text-lg leading-relaxed mb-8">
-          Web & Mobile development student, I combine technical skills and artistic 
-          creativity to build impactful digital experiences. Award winner in several 
-          competitions, I am looking for a work-study contract starting September 2026.
+
+        <p className="text-[#A8A8A8] text-lg leading-relaxed mb-8">
+          Web & Mobile development student, I combine technical skills with
+          artistic creativity to build impactful digital experiences. Currently
+          in my 2nd year Bachelor's in Web & Mobile Development at École
+          Multimédia, I'm looking for a work-study contract starting
+          September 2026.
         </p>
 
-        <p className="text-gray-300 text-lg leading-relaxed mb-8">
-          Web & Mobile development student, I combine technical skills and artistic 
-          creativity to build impactful digital experiences. Award winner in several 
-          competitions, I am looking for a work-study contract starting September 2026.
+        <p className="text-[#A8A8A8] text-lg leading-relaxed mb-8">
+          During my internship at ZYA Agency, I worked autonomously on
+          TransRail, designing and developing a management dashboard and a
+          mobile application using React Native, PHP, Flutter and the Laravel
+          API — from writing the technical specs to building the UI/UX
+          mockups.
         </p>
 
-        <p className="text-gray-300 text-lg leading-relaxed mb-8">
-          Web & Mobile development student, I combine technical skills and artistic 
-          creativity to build impactful digital experiences. Award winner in several 
-          competitions, I am looking for a work-study contract starting September 2026.
+        <p className="text-[#A8A8A8] text-lg leading-relaxed mb-14">
+          Award winner of the regional Mangawa contest and Samsung's #WithMy
+          mobile photography competition, I bring the same creative eye to
+          interface design as I do to code.
         </p>
 
-        <motion.div className="div">
-            <motion.div className="div">
-                
-            
-
+        {/* Skills grid */}
+        <motion.div className="grid grid-cols-3 gap-4">
+          {skills.map((skill) => (
+            <motion.div
+              key={skill}
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.2 }}
+              className="
+                relative overflow-hidden
+                border border-[#FF8C00]/30 bg-[#171717]
+                py-4 text-[#F5F5F5] font-mono text-sm tracking-wide
+                hover:border-[#FFD000]
+                transition-colors duration-300
+              "
+            >
+              {skill}
             </motion.div>
+          ))}
         </motion.div>
 
+        {/* Divider */}
+        <div className="mt-14 h-px w-full bg-gradient-to-r from-transparent via-[#FF8C00]/40 to-transparent" />
 
-
-        {/* Skills */}
-       
-            
-
-       
       </motion.div>
-      <div className='ligne'>.</div>
     </section>
-  )
+  );
 }

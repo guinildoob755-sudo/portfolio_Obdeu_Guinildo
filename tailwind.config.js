@@ -2,6 +2,8 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   // tailwind.config.js
+  darkMode: "class", // 👈 active le toggle manuel via une classe
+  // ...
 theme: {
   extend: {
     backgroundImage: {

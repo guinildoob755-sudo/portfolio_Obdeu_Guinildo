@@ -1,57 +1,80 @@
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
+import { NeonPulse } from '../../components/NeonPulse';
 
 export default function Hero() {
   return (
 
-    <section id="Hero" className='min-h-screen flex items-center justify-center px-8 py-10'>
-    <motion.div className=" bg-grid ">
-      <motion.div className='h-screen flex flex-col justify-center items-center gap-4 text-center'>
+    <section id="Hero" className='min-h-screen flex items-center justify-center px-8 py-20 bg-[#0B0B0B]'>
+      <motion.div className="bg-grid">
+        <motion.div className='h-screen flex flex-col justify-center items-center gap-4 text-center'>
 
-        <motion className="div text-[#eddd53]">
-          // AVAILABLE FOR ALTERNANCE - SEPT. 2026
-        </motion>
 
-        <motion.h1 className='text-[#ffffff] text-2xl font-bold' initial={{opacity: 0, y: -50}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5}} >
-        Guinildo <span className='obdeu'>Obdeu</span>
-        </motion.h1>  
+          <motion.div className="text-[#FF8C00] font-mono text-xs tracking-[0.25em] uppercase mb-3">
+            // AVAILABLE FOR ALTERNANCE - SEPT. 2026
+          </motion.div>
 
-        <motion.h2 className='text-5xl font-bold text-[#ffffff] '
-         initial={{opacity: 0, y: -50}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5}}>   
-          welcome to my portfolio
-        </motion.h2>
+          <motion.h1 className='text-[#F5F5F5] text-2xl font-bold' initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} >
+            Guinildo <span className='obdeu text-[#FF8C00]'>Obdeu</span>
+          </motion.h1>
 
-        <motion.p className='text-xl text-[#ffffff]'
-         initial={{opacity: 0, y: 50}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, delay: 0.3}}>    
+          <NeonPulse preset="gold" fontSize="4rem" className='welcome'> welcome to my portfolio</NeonPulse>
+
+
+          <motion.p className='text-xl text-[#F5F5F5]'
+            initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             I'm a passionate web developer specializing in React and Tailwind CSS.
-        </motion.p>
+          </motion.p>
 
-        <motion.p className='text-lg text-[#ffffff] leading-relaxed mb-8'
-         initial={{opacity: 0, y: 50}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, delay: 0.6}}>
-          Web & Mobile Developer based in Palaiseau, France.
-           I create responsive and user-friendly websites and
+          <motion.p className='text-lg text-[#A8A8A8] leading-relaxed mb-8 max-w-2xl'
+            initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }}>
+            Web & Mobile Developer based in Palaiseau, France.
+            I create responsive and user-friendly websites and
             applications using React and Tailwind CSS.
-           I build impactful digital experiences that engage
-            users and drive results. Let's connect and create 
+            I build impactful digital experiences that engage
+            users and drive results. Let's connect and create
             something amazing together!
-        </motion.p>
+          </motion.p>
 
-        <motion className='div text-[#eddd53] flex' 
-        initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{duration: 0.3, delay: 0.9}}>
-          // Scroll to explore
-        </motion>
-        
+          {/* CTA buttons */}
+          <motion.div className='flex gap-4 flex-wrap justify-center mb-8'
+            initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.75 }}>
+            <a
+              href="#Projects"
+              className="
+                px-8 py-3 font-mono text-xs tracking-[0.1em] uppercase font-bold
+                bg-[#FF8C00] text-[#0B0B0B]
+                hover:bg-[#FFD000]
+                transition-colors duration-300
+              "
+            >
+              View Projects
+            </a>
+            <a
+              href="#Contact"
+              className="
+                px-8 py-3 font-mono text-xs tracking-[0.1em] uppercase
+                border border-[#FF8C00]/40 text-[#F5F5F5]
+                hover:border-[#FFD000] hover:text-[#FF8C00]
+                transition-colors duration-300
+              "
+            >
+              Get in Touch
+            </a>
+          </motion.div>
 
-  
+          <motion.div className='text-[#eddd53] font-mono text-xs tracking-[0.15em] uppercase flex items-center gap-4'
+            initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.9 }}>
+            <span className="w-10 h-px bg-[#eddd53]/50" />
+            Scroll to explore
+          </motion.div>
 
-    </motion.div>
-    <div className='ligne'>.</div>
-    
-    </motion.div>
-    
+        </motion.div>
 
-    
-    
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#FF8C00]/40 to-transparent" />
+
+      </motion.div>
+
     </section>
-    
+
   )
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
+import logoOrange from '../../assets/logo_orange.svg'
 
 export default function Navbar() {
 
@@ -8,8 +9,10 @@ export default function Navbar() {
   const links = [
     { to: 'Hero', label: 'Accueil' },
     { to: 'About', label: 'À propos' },
-    { to: 'Work', label: 'Projets' },
+    { to: 'Skills', label: 'Skills' },
+    { to: 'Projects', label: 'Projets' },
     { to: 'Contact', label: 'Contact' },
+    
   ]
 
   return (
@@ -22,18 +25,30 @@ export default function Navbar() {
       z-50
     ">
 
+
       {/* LOGO */}
-      <h1 className="
-        text-xl md:text-2xl
-        font-bold
-        tracking-widest
-        text-[#FDBB2D]
-        hover:scale-110
-        transition-transform duration-300
-        cursor-pointer
-      ">
-        GO_PORTFOLIO
-      </h1>
+<div className="flex items-center gap-3 cursor-pointer group">
+  <img
+    src={logoOrange}
+    alt="GO Portfolio Logo"
+    className="
+      h-10 md:h-12
+      group-hover:scale-110
+      transition-transform duration-300
+    "
+  />
+
+  <h1 className="
+    text-xl md:text-2xl
+    font-bold
+    tracking-widest
+    text-[#FDBB2D]
+    group-hover:scale-110
+    transition-transform duration-300
+  ">
+    PORTFOLIO
+  </h1>
+</div>
 
       {/* LINKS */}
       <ul className="
@@ -41,6 +56,7 @@ export default function Navbar() {
         gap-8
         items-center
       ">
+        
         {links.map(({ to, label }) => (
           <li key={to}>
             <Link
@@ -85,6 +101,40 @@ export default function Navbar() {
         <span className="w-6 h-0.5 bg-[#FDBB2D]" />
       </button>
 
+      {isOpen &&(
+        <ul className="md:hidden flex flex-col gap-4 px-8 bg-black">
+          {links.map(({to, label}) => (
+
+            <li  key={to}>
+            <Link
+            
+             to={to}
+                smooth
+                duration={600}
+                offset={-80}
+                onClick={() => setIsOpen(false)}
+                className="
+                  text-gray-300
+                  hover:text-[#FDBB2D]
+                  cursor-pointer
+                  transition-colors duration-300
+                "
+           
+            >
+              {label}
+
+            </Link>
+
+            </li>
+          ))}
+        </ul>
+      )}
+
     </nav>
+
+    
+
+    
+
   )
 }
