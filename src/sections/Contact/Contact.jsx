@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section
       id="Contact"
-      className="min-h-screen flex items-center justify-center px-8 py-20 bg-white dark:bg-[#0B0B0B]"
+      className="min-h-screen flex items-center justify-center px-8 py-20 bg-gradient-to-r from-[#171717] to-[#3a1f00]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -24,13 +24,13 @@ export default function Contact() {
           // 05 — Contact
         </motion.div>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#1A1A1A] dark:text-[#F5F5F5] mb-8 tracking-tight">
+        <h2 className="text-4xl md:text-5xl text-[#F5F5F5] dark:text-[#F5F5F5] mb-8 tracking-tight">
           Let's work together
         </h2>
 
-        <p className="text-lg text-[#555555] dark:text-[#A8A8A8] leading-relaxed mb-10">
+        <p className="text-lg text-[#F5F5F5] dark:text-[#F5F5F5] leading-relaxed mb-10">
           I'm actively looking for an{" "}
-          <strong className="text-[#1A1A1A] dark:text-[#F5F5F5]">
+          <strong className="text-[#F5F5F5] dark:text-[#F5F5F5]">
             alternance starting September 2026
           </strong>
           . If you're building something interesting, I'd love to hear about it.

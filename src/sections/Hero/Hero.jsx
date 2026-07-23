@@ -4,7 +4,7 @@ import { NeonPulse } from '../../components/NeonPulse';
 export default function Hero() {
   return (
 
-    <section id="Hero" className='min-h-screen flex items-center justify-center px-8 py-20 bg-[#0B0B0B]'>
+    <section id="Hero" className='min-h-screen flex items-center justify-center px-8 py-20 bg-gradient-to-r from-[#171717] to-[#3a1f00]'>
       <motion.div className="bg-grid">
         <motion.div className='h-screen flex flex-col justify-center items-center gap-4 text-center'>
 
@@ -22,10 +22,10 @@ export default function Hero() {
 
           <motion.p className='text-xl text-[#F5F5F5]'
             initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-            I'm a passionate web developer specializing in React and Tailwind CSS.
+            I'm a passionate web developer specializing in JavaScript, PHP and React.
           </motion.p>
 
-          <motion.p className='text-lg text-[#A8A8A8] leading-relaxed mb-8 max-w-2xl'
+          <motion.p className='text-lg text-[#F5F5F5] leading-relaxed mb-8 max-w-2xl'
             initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }}>
             Web & Mobile Developer based in Palaiseau, France.
             I create responsive and user-friendly websites and
@@ -62,9 +62,9 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div className='text-[#eddd53] font-mono text-xs tracking-[0.15em] uppercase flex items-center gap-4'
+          <motion.div className='text-[#FF8C00] font-mono text-xs tracking-[0.15em] uppercase flex items-center gap-4'
             initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.9 }}>
-            <span className="w-10 h-px bg-[#eddd53]/50" />
+            <span className="w-10 h-px bg-[#FF8C00]/50" />
             Scroll to explore
           </motion.div>
 

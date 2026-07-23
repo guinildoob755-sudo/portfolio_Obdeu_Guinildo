@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className="min-h-screen flex items-center justify-center px-8 py-20 bg-[#0B0B0B]"
+      className="min-h-screen flex items-center justify-center px-8 py-20 bg-gradient-to-r from-[#171717] to-[#3a1f00]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -20,11 +20,11 @@ export default function Skills() {
         className="max-w-4xl w-full"
       >
         {/* Label */}
-        <motion.div className="font-mono text-xs tracking-[0.25em] text-[#FF8C00] uppercase mb-3">
+        <motion.div className="font-mono text-xs tracking-[0.25em] text-[#FF8C00] uppercase mb-3 text-center">
           // 02 — Skills
         </motion.div>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#F5F5F5] mb-14 tracking-tight">
+        <h2 className="text-4xl md:text-5xl text-[#F5F5F5] mb-14 tracking-tight text-center">
           What I work with
         </h2>
 
@@ -36,11 +36,18 @@ export default function Skills() {
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
               className="
-                relative overflow-hidden text-left
-                bg-[#171717] border border-[#FF8C00]/30
-                p-6
-                hover:border-[#FF8C00]
-                transition-colors duration-300
+              rounded-xl
+              relative overflow-hidden
+              bg-gradient-to-br from-[#171717] to-[#FF8C00]
+              border border-[#FF8C00]/30
+              p-6
+              shadow-md
+              transition-all duration-300
+              hover:border-[#FF8C00]
+              hover:-translate-y-1
+              hover:shadow-xl
+              hover:shadow-[#FF8C00]/10
+                
               "
             >
               {/* Left accent bar, comme .stat-card / .skill-category */}
@@ -55,6 +62,7 @@ export default function Skills() {
                   <span
                     key={skill}
                     className="
+                      rounded-xl
                       font-mono text-[0.72rem] tracking-wide
                       px-3.5 py-1.5
                       bg-[#171717] border border-[#FF8C00]/30
