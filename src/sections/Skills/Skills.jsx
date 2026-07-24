@@ -53,7 +53,7 @@ export default function Skills() {
               {/* Left accent bar, comme .stat-card / .skill-category */}
               <span className="absolute top-0 left-0 w-[3px] h-full bg-[#FF8C00]" />
 
-              <h3 className="font-mono text-xs tracking-[0.15em] text-[#FF8C00] uppercase mb-5">
+              <h3 className="font-mono text-xs tracking-[0.15em] text-[#FFCEA6] uppercase mb-5">
                 {group.title}
               </h3>
 

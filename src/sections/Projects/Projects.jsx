@@ -1,36 +1,50 @@
 import { motion } from "framer-motion";
+import bugtraker from "../../assets/images/projects/bugtraker.png";
+import transrail from "../../assets/images/projects/transrail.png";
+import streetart from "../../assets/images/projects/streetart.png";
+import prompt from "../../assets/images/projects/prompt.png";
+
+
 
 const projects = [
   {
     number: "01",
+    image: bugtraker,
     title: "Bugtracker",
     desc: "A full-stack bug management application with ticket CRUD, tracking dashboard, and authentication system.",
     stack: ["React", "PHP", "Firebase"],
     links: [
       { label: "Live Demo", url: "https://guinildo.alwaysdata.net/login_page.php" },
       { label: "GitHub", url: "https://github.com/guinildoob755-sudo/bugtracker_projet" },
+      
     ],
+    /* ... */
   },
   {
     number: "02",
+    image: transrail,
     title: "TransRail",
     desc: "Client dashboard for real-time management and tracking, built independently during internship at ZYA Agency.",
     stack: ["React Native", "Flutter", "Laravel", "PHP"],
     links: [
       { label: "GitHub", url: "https://github.com/guinildoob755-sudo" },
     ],
+    /* ... */
   },
   {
     number: "03",
+    image: streetart,
     title: "LocalStreet Art",
     desc: "A platform to discover and share local street art, combining my passion for art with development.",
     stack: ["React", "Firebase"],
     links: [
       { label: "GitHub", url: "https://github.com/guinildoob755-sudo/local_street_art_GO" },
     ],
+    /* ... */
   },
   {
     number: "04",
+    image: prompt,
     title: "PromptWallet",
     desc: "A collaborative desktop product prototype — prompt management tool built with Electron and Vite.",
     stack: ["Electron", "Vite", "React"],
@@ -38,6 +52,7 @@ const projects = [
       { label: "GitHub", url: "https://github.com/Ali223406/prompt-wallet-electron-vite" },
     ],
   },
+  /* ... */
 ];
 
 export default function Projects() {
@@ -84,8 +99,10 @@ export default function Projects() {
                   bg-gradient-to-br from-[#FF8C00]/10 to-transparent
                   border-b border-[#FF8C00]/20
                 "
+                style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               >
-              
+                
+                
               </div>
 
               <div className="p-6">
