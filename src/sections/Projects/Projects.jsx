@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import bugtraker from "../../assets/images/projects/bugtraker.png";
-import transrail from "../../assets/images/projects/transrail.png";
+import Lab_201 from "../../assets/images/projects/Lab_201.png";
 import streetart from "../../assets/images/projects/streetart.png";
 import prompt from "../../assets/images/projects/prompt.png";
 
@@ -22,12 +22,13 @@ const projects = [
   },
   {
     number: "02",
-    image: transrail,
-    title: "TransRail",
-    desc: "Client dashboard for real-time management and tracking, built independently during internship at ZYA Agency.",
-    stack: ["React Native", "Flutter", "Laravel", "PHP"],
+    image: Lab_201,
+    title: "the Lab_201",
+    desc: "Lab_201 is a presentation project dedicated to the album IT'S BEEN AWFUL by artist Isaiah Rashad, created in collaboration with communication students.",
+    stack: ["React Native","Firebase"],
     links: [
       { label: "GitHub", url: "https://github.com/guinildoob755-sudo" },
+      { label: "Live Demo", url: "https://lab-14d8c.web.app/" },
     ],
     /* ... */
   },
